@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>EmüMaster PRO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkPassword()">
+  <div id="splash">
+    <h1>EmüMaster PRO</h1>
+    <p>Yükleniyor...</p>
+  </div>
+  <div id="app" style="display:none;">
+    <h2>Hoş geldin, <span id="username">Ziyaretçi</span>!</h2>
+    <input type="text" placeholder="Adını yaz" id="nameInput">
+    <button onclick="setName()">Kaydet</button>
+    <p>Oyunlar listesi yakında burada olacak!</p>
+  </div>
+<script src="app.js"></script>
+<script>
+function checkPassword() {
+    const pass = prompt("EmüMaster PRO'ya giriş şifresi:");
+    if (pass !== "floppa123") {
+        alert("Hatalı şifre!");
+        window.location.href = "https://google.com";
+    }
+}
+</script>
+</body>
+</html>
